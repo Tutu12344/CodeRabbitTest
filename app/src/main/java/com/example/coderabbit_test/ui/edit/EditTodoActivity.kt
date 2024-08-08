@@ -1,24 +1,21 @@
-package com.example.coderabbit_test
+package com.example.coderabbit_test.ui.edit
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.viewModels
+import com.example.coderabbit_test.ui.edit.compose.EditTodoPage
 import com.example.coderabbit_test.ui.theme.CodeRabbit_TestTheme
-import com.example.coderabbit_test.ui.todo_list.TodoListPage
-import com.example.coderabbit_test.ui.todo_list.TodoListViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.HiltAndroidApp
 
 @AndroidEntryPoint
-class MainActivity : ComponentActivity() {
-    private val todoListViewModel: TodoListViewModel by viewModels()
-
+class EditTodoActivity : ComponentActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val id = intent.getIntExtra("id", 0)
         setContent {
             CodeRabbit_TestTheme {
-                TodoListPage(viewModel = todoListViewModel)
+                EditTodoPage(id = id)
             }
         }
     }
