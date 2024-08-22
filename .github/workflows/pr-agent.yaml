@@ -22,4 +22,4 @@ jobs:
           GITHUB_ACTION.AUTO_REVIEW: true
           PR_REVIEWER.EXTRA_INSTRUCTIONS: 'Please use Japanese in descriptions.'
           PR_DESCRIPTION.EXTRA_INSTRUCTIONS: 'Please use Japanese in descriptions. Titles should have prefix of commitlint pattern such as `feat:`, `chore:`, `test:`, `fix:`, `ci:`, `docs:` etc'
-          CONFIG.MODEL: gpt-3.5-turbo
+          CONFIG.MODEL: 'gpt-3.5-turbo-0125'
